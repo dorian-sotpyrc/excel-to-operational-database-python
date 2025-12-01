@@ -1,0 +1,31 @@
+excel_path: "data/raw/sample_workbook.xlsx"
+database_url: "sqlite:///data/db/app.db"
+
+sheets:
+  customers:
+    table: customers
+    index_column: customer_id
+    dtypes:
+      customer_id: int
+      name: string
+      email: string
+      joined_date: date
+
+  products:
+    table: products
+    index_column: product_id
+    dtypes:
+      product_id: int
+      name: string
+      category: string
+      unit_price: decimal
+
+  orders:
+    table: orders
+    index_column: order_id
+    dtypes:
+      order_id: int
+      customer_id: int
+      product_id: int
+      order_date: date
+      quantity: int
